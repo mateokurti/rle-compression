@@ -48,16 +48,16 @@ void generate_image(vector<vector<Color> >& img) {
     vector<Color> colors;
     colors.push_back(Color(0,0,0));
     colors.push_back(Color(1,2,3));
-    // colors.push_back(Color(4,5,6));
-    // colors.push_back(Color(7,8,9));
-    // colors.push_back(Color(1,3,7));
+    colors.push_back(Color(4,5,6));
+    colors.push_back(Color(7,8,9));
+    colors.push_back(Color(1,3,7));
     // NOTE: Chose numbers 0-9 instead of 0-255 to make the display easies (same number of digits)
 
     srand(time(0));
     for (int i=0; i<M; i++) {
         vector<Color> row;
         for (int j=0; j<N; j++) {
-            row.push_back(colors[rand() % 10 % 2]);
+            row.push_back(colors[rand() % 10 % 5]);
         }
         img.push_back(row);
     }
