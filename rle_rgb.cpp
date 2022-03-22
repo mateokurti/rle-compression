@@ -37,9 +37,8 @@ void reset_image(vector<vector<Color> >& img) {
     }
 }
 
-int main() {
-    vector<vector<Color> > img;
-
+void generate_image(vector<vector<Color> >& img) {
+    // TODO: Find a more creative way to generate images
     for (int i=0; i<M; i++) {
         vector<Color> row;
         for (int j=0; j<N; j++) {
@@ -47,6 +46,13 @@ int main() {
         }
         img.push_back(row);
     }
+}
 
+int main() {
+    vector<vector<Color> > img;
+    generate_image(img);
     display_image(img);
+
+    // Encode RGB image to RLE
+    
 }
